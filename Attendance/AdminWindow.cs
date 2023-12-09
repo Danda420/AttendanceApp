@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Attendance
 {
-    public partial class Form1 : Form
+    public partial class AdminWindow : Form
     {
-        public Form1()
+        public AdminWindow()
         {
             InitializeComponent();
+        }
+
+        private void AdminWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
