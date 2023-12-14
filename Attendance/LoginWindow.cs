@@ -117,13 +117,13 @@ namespace Attendance
                 {
                     EmailBox.Text = null;
                     PasswordBox.Text = null;
-                    warning.Text = "Username atau password salah!";
+                    warning.Text = "Email atau password salah!";
                 }
                 conn.Close();
             }
             else
             {
-                warning.Text = "Username dan Password harus diisi!";
+                warning.Text = "Email dan Password harus diisi!";
             }
         }
 
