@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Attendance
 {
@@ -17,6 +18,24 @@ namespace Attendance
         private MemberWindow memberWindowInstance;
         private AdminWindow adminWindowInstance;
 
+        public class Session
+        {
+            public static string loggedInEmail { get; private set; }
+
+            public static string loggedInName { get; private set; }
+
+            public static void SetLoggedInUser(string email, string name)
+            {
+                loggedInEmail = email;
+                loggedInName = name;
+            }
+
+            public static void destroySession()
+            {
+                loggedInEmail = null;
+            }
+        }
+
         public LoginForm()
         {
             InitializeComponent();
@@ -24,56 +43,82 @@ namespace Attendance
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = UsernameBox.Text.Trim();
+            string email = EmailBox.Text.Trim();
             string password = PasswordBox.Text.Trim();
 
-            if (username != "" && password != "")
+            if (email != "" && password != "")
             {
                 conn.Open();
-                string query = "SELECT * FROM users WHERE username = @username AND password = @password";
+                string query = "SELECT * FROM users WHERE email = @email AND password = @password";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@password", password);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    if (username == "admin")
+                    string getNama = "SELECT nama FROM users WHERE email = @email";
+                    string getPangkat = "SELECT pangkat FROM users WHERE email = @email";
+                    MySqlCommand getNamaCmd = new MySqlCommand(getNama, conn);
+                    MySqlCommand getPangkatCmd = new MySqlCommand(getPangkat, conn);
+                    getNamaCmd.Parameters.AddWithValue("@email", email);
+                    getPangkatCmd.Parameters.AddWithValue("@email", email);
+
+                    reader.Close();
+
+                    using (MySqlDataReader getNamaReader = getNamaCmd.ExecuteReader())
                     {
-                        if (adminWindowInstance == null || adminWindowInstance.IsDisposed)
+                        if (getNamaReader.Read())
                         {
-                            adminWindowInstance = new AdminWindow();
-                            adminWindowInstance.Show();
+                            string nama = getNamaReader["nama"].ToString();
+                            Session.SetLoggedInUser(email, nama);
                         }
-                        else
-                        {
-                            adminWindowInstance.BringToFront();
-                        }
-                        warning.Text = null;
                     }
-                    else
+
+                    using (MySqlDataReader getPangkatReader = getPangkatCmd.ExecuteReader())
                     {
-                        if (memberWindowInstance == null || memberWindowInstance.IsDisposed)
+                        if (getPangkatReader.Read())
                         {
-                            memberWindowInstance = new MemberWindow();
-                            memberWindowInstance.Show();
+                            string pangkat = getPangkatReader["pangkat"].ToString();
+
+                            if (pangkat == "admin")
+                            {
+                                if (adminWindowInstance == null || adminWindowInstance.IsDisposed)
+                                {
+                                    adminWindowInstance = new AdminWindow();
+                                    adminWindowInstance.Show();
+                                }
+                                else
+                                {
+                                    adminWindowInstance.BringToFront();
+                                }
+                                warning.Text = null;
+                            }
+                            else
+                            {
+                                if (memberWindowInstance == null || memberWindowInstance.IsDisposed)
+                                {
+                                    memberWindowInstance = new MemberWindow();
+                                    memberWindowInstance.Show();
+                                }
+                                else
+                                {
+                                    memberWindowInstance.BringToFront();
+                                }
+                                warning.Text = null;
+                            }
+                            this.Hide();
                         }
-                        else
-                        {
-                            memberWindowInstance.BringToFront();
-                        }
-                        warning.Text = null;
                     }
-                    this.Hide();
+                    
                 }
                 else
                 {
-                    UsernameBox.Text = null;
+                    EmailBox.Text = null;
                     PasswordBox.Text = null;
                     warning.Text = "Username atau password salah!";
                 }
-
                 conn.Close();
             }
             else
@@ -86,12 +131,6 @@ namespace Attendance
         private void Form1_Load(object sender, EventArgs e)
         {
             PasswordBox.PasswordChar = '*';
-        }
-
-        private void btnRegist_Click(object sender, EventArgs e)
-        {
-            var registForm = new RegisterWindow();
-            registForm.Show();
         }
 
         private void passCheckbox_CheckedChanged(object sender, EventArgs e)
