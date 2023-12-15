@@ -20,6 +20,8 @@ namespace Attendance
         private MySqlDataAdapter adapter;
         private DataTable dataTable;
 
+        string adminName = LoginForm.Session.loggedInName;
+
         public ManageAccounts()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace Attendance
         public void updateTable()
         {
             conn.Open();
-            string query = $"SELECT * FROM users WHERE pangkat != 'admin'";
+            string query = $"SELECT * FROM users WHERE nama != '{adminName}'";
             cmd = new MySqlCommand(query, conn);
 
             adapter = new MySqlDataAdapter(cmd);
