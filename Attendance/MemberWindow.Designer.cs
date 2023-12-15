@@ -32,11 +32,11 @@
             this.Email = new System.Windows.Forms.Label();
             this.btnAbsen = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblNama = new System.Windows.Forms.Label();
             this.rbHadir = new System.Windows.Forms.RadioButton();
             this.rbIzin = new System.Windows.Forms.RadioButton();
             this.rbAlfa = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,17 +81,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 92);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(775, 346);
-            this.dataGridView1.TabIndex = 0;
             // 
             // lblNama
             // 
@@ -139,6 +128,17 @@
             this.rbAlfa.Text = "No inpo";
             this.rbAlfa.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 92);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(775, 346);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // MemberWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,10 +167,10 @@
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Button btnAbsen;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblNama;
         private System.Windows.Forms.RadioButton rbHadir;
         private System.Windows.Forms.RadioButton rbIzin;
         private System.Windows.Forms.RadioButton rbAlfa;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

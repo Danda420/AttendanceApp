@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,7 +31,6 @@ namespace Attendance
 
         public void updateTable()
         {
-            conn.Open();
             string query = $"SELECT * FROM attendance WHERE nama = '{loggedInName}'";
             cmd = new MySqlCommand(query, conn);
 
@@ -51,14 +52,15 @@ namespace Attendance
                     column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
             }
-            conn.Close();
         }
 
         private void Member_Load(object sender, EventArgs e)
         {
             Email.Text = $"Email : {loggedInEmail}";
             lblNama.Text = $"Nama : {loggedInName}";
+            conn.Open();
             updateTable();
+            conn.Close();
         }
 
         private void btnAbsen_Click(object sender, EventArgs e)
@@ -79,15 +81,40 @@ namespace Attendance
             }
 
             DateTime currentDate = DateTime.Now;
-            string date = currentDate.ToString("yyyy-MM-dd");
+            string hourNOW = currentDate.ToString("HH");
 
             conn.Open();
-            string absen = $"INSERT INTO attendance (nama, date, attendance) VALUES ('{loggedInName}', '{date}', '{status}')";
-            cmd = new MySqlCommand(absen, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            string getTime = "SELECT time FROM attendance WHERE nama = @nama ORDER BY date DESC, time DESC LIMIT 1";
+            MySqlCommand getTimeCmd = new MySqlCommand(getTime, conn);
+            getTimeCmd.Parameters.AddWithValue("@nama", loggedInName);
 
-            updateTable();
+            using (MySqlDataReader getTimeReader = getTimeCmd.ExecuteReader())
+            {
+                if (getTimeReader.Read())
+                {
+                    string timeAbsenStr = getTimeReader["time"].ToString();
+                    DateTime timeAbsen = DateTime.ParseExact(timeAbsenStr, "HH:mm:ss", CultureInfo.InvariantCulture);
+                    string hourAbsen = timeAbsen.ToString("HH");
+
+                    if (hourAbsen != hourNOW)
+                    {
+                        string absen = $"INSERT INTO attendance (nama, attendance) VALUES ('{loggedInName}', '{status}')";
+                        cmd = new MySqlCommand(absen, conn);
+                        getTimeReader.Close();
+                        cmd.ExecuteNonQuery();
+                        updateTable();
+                    }
+                }
+                else if (!getTimeReader.HasRows)
+                {
+                    string absen = $"INSERT INTO attendance (nama, attendance) VALUES ('{loggedInName}', '{status}')";
+                    cmd = new MySqlCommand(absen, conn);
+                    getTimeReader.Close();
+                    cmd.ExecuteNonQuery();
+                    updateTable();
+                }
+            }
+            conn.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
