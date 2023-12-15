@@ -33,7 +33,7 @@
             this.IDBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.btnManageAcc = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -98,15 +98,16 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Attendance";
             // 
-            // button2
+            // btnExport
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Location = new System.Drawing.Point(15, 451);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(294, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Export Data";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExport.Location = new System.Drawing.Point(15, 451);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(294, 23);
+            this.btnExport.TabIndex = 8;
+            this.btnExport.Text = "Export Data";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnManageAcc
             // 
@@ -258,7 +259,7 @@
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnManageAcc);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IDBox);
@@ -280,7 +281,7 @@
         private System.Windows.Forms.TextBox IDBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnManageAcc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLogout;
