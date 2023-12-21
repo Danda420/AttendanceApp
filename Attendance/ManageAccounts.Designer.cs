@@ -43,15 +43,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.IDBoxDel = new System.Windows.Forms.TextBox();
             this.btnDelAcc = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // warning
             // 
+            this.warning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.warning.AutoSize = true;
             this.warning.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warning.ForeColor = System.Drawing.Color.Black;
-            this.warning.Location = new System.Drawing.Point(12, 275);
+            this.warning.Location = new System.Drawing.Point(12, 328);
             this.warning.Name = "warning";
             this.warning.Size = new System.Drawing.Size(0, 16);
             this.warning.TabIndex = 11;
@@ -65,9 +68,9 @@
             // 
             // btnAddAcc
             // 
-            this.btnAddAcc.Location = new System.Drawing.Point(12, 240);
+            this.btnAddAcc.Location = new System.Drawing.Point(12, 301);
             this.btnAddAcc.Name = "btnAddAcc";
-            this.btnAddAcc.Size = new System.Drawing.Size(250, 32);
+            this.btnAddAcc.Size = new System.Drawing.Size(250, 24);
             this.btnAddAcc.TabIndex = 8;
             this.btnAddAcc.Text = "Add Account";
             this.btnAddAcc.UseVisualStyleBackColor = true;
@@ -95,7 +98,7 @@
             // 
             // PasswordBox
             // 
-            this.PasswordBox.Location = new System.Drawing.Point(12, 203);
+            this.PasswordBox.Location = new System.Drawing.Point(12, 264);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(250, 20);
             this.PasswordBox.TabIndex = 13;
@@ -104,7 +107,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 184);
+            this.label3.Location = new System.Drawing.Point(9, 245);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 12;
@@ -136,15 +139,19 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(291, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(468, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(547, 480);
             this.dataGridView1.TabIndex = 16;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(13, 380);
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnBack.Location = new System.Drawing.Point(13, 460);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(249, 32);
             this.btnBack.TabIndex = 17;
@@ -154,9 +161,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 294);
+            this.label7.Location = new System.Drawing.Point(9, 374);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(20, 13);
             this.label7.TabIndex = 28;
@@ -164,14 +172,16 @@
             // 
             // IDBoxDel
             // 
-            this.IDBoxDel.Location = new System.Drawing.Point(12, 310);
+            this.IDBoxDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.IDBoxDel.Location = new System.Drawing.Point(12, 390);
             this.IDBoxDel.Name = "IDBoxDel";
             this.IDBoxDel.Size = new System.Drawing.Size(250, 20);
             this.IDBoxDel.TabIndex = 27;
             // 
             // btnDelAcc
             // 
-            this.btnDelAcc.Location = new System.Drawing.Point(12, 336);
+            this.btnDelAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDelAcc.Location = new System.Drawing.Point(12, 416);
             this.btnDelAcc.Name = "btnDelAcc";
             this.btnDelAcc.Size = new System.Drawing.Size(250, 23);
             this.btnDelAcc.TabIndex = 26;
@@ -179,11 +189,31 @@
             this.btnDelAcc.UseVisualStyleBackColor = true;
             this.btnDelAcc.Click += new System.EventHandler(this.btnDelAcc_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 185);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(205, 16);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Assign Event (Operator only)";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 205);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(250, 21);
+            this.comboBox1.TabIndex = 30;
+            // 
             // ManageAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 425);
+            this.ClientSize = new System.Drawing.Size(850, 505);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.IDBoxDel);
             this.Controls.Add(this.btnDelAcc);
@@ -202,7 +232,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "ManageAccounts";
-            this.Text = "Register";
+            this.Text = "Manage Accounts";
             this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -227,5 +257,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox IDBoxDel;
         private System.Windows.Forms.Button btnDelAcc;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

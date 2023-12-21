@@ -52,6 +52,7 @@ namespace Attendance
             string email = EmailBox.Text.ToString();
             string nama = NamaBox.Text.ToString();
             string pangkat = PangkatBox.Text.ToString();
+            string event_ = comboBox1.Text;
             string password = PasswordBox.Text.ToString();
 
             if (email != "" && nama != "" && pangkat != "" && password != "")
@@ -67,10 +68,15 @@ namespace Attendance
                 }
                 else
                 {
-                    string register = $"INSERT INTO users (email, nama, pangkat, password) VALUES ('{email}', '{nama}', '{pangkat}', '{password}')";
+                    string register = $"INSERT INTO users (email, nama, pangkat, assigned_event, password) VALUES ('{email}', '{nama}', '{pangkat}', '{event_}', '{password}')";
                     cmd = new MySqlCommand(register, conn);
                     cmd.ExecuteNonQuery();
                     warning.Text = "User ditambahkan!";
+
+                    EmailBox.Clear();
+                    NamaBox.Clear();
+                    PangkatBox.Clear();
+                    PasswordBox.Clear();
                 }
                 conn.Close();
 
@@ -85,6 +91,20 @@ namespace Attendance
         private void Register_Load(object sender, EventArgs e)
         {
             updateTable();
+
+            comboBox1.Items.Clear();
+
+            conn.Open();
+
+            string query = "SELECT * FROM events";
+            cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                comboBox1.Items.Add(reader.GetString(1));
+            }
+            conn.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
