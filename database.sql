@@ -7,6 +7,7 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `pangkat` varchar(255) NOT NULL,
+  `assigned_event` varchar(255),
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 );
@@ -14,9 +15,18 @@ CREATE TABLE `users` (
 CREATE TABLE `attendance` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(255) NOT NULL,
+  `event` varchar(255) NOT NULL,
   `date` date NOT NULL DEFAULT CURRENT_DATE,
   `time` time NOT NULL DEFAULT CURRENT_TIME,
   `attendance` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `event` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `date` date NOT NULL,
   PRIMARY KEY (`id`)
 );
 
