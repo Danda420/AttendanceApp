@@ -15,8 +15,6 @@ namespace Attendance
     public partial class LoginForm : Form
     {
         public MySqlConnection conn = new MySqlConnection("server=127.0.0.1;user=root;database=attendance;password=");
-        private MemberWindow memberWindowInstance;
-        private AdminWindow adminWindowInstance;
 
         public class Session
         {
@@ -24,10 +22,13 @@ namespace Attendance
 
             public static string loggedInName { get; private set; }
 
-            public static void SetLoggedInUser(string email, string name)
+            public static string loggedInEvent { get; private set; }
+
+            public static void SetLoggedInUser(string email, string name, string event_)
             {
                 loggedInEmail = email;
                 loggedInName = name;
+                loggedInEvent = event_;
             }
 
             public static void destroySession()
@@ -59,22 +60,37 @@ namespace Attendance
                 if (reader.Read())
                 {
                     string getNama = "SELECT nama FROM users WHERE email = @email";
+                    string getEvent = "SELECT assigned_event FROM users WHERE email = @email";
                     string getPangkat = "SELECT pangkat FROM users WHERE email = @email";
                     MySqlCommand getNamaCmd = new MySqlCommand(getNama, conn);
+                    MySqlCommand getEventCmd = new MySqlCommand(getEvent, conn);
                     MySqlCommand getPangkatCmd = new MySqlCommand(getPangkat, conn);
                     getNamaCmd.Parameters.AddWithValue("@email", email);
+                    getEventCmd.Parameters.AddWithValue("@email", email);
                     getPangkatCmd.Parameters.AddWithValue("@email", email);
 
+                    string nama = null;
+                    string event_ = null;
+
                     reader.Close();
+
+                    using (MySqlDataReader getEventReader = getEventCmd.ExecuteReader())
+                    {
+                        if (getEventReader.Read())
+                        {
+                            event_ = getEventReader["assigned_event"].ToString();
+                        }
+                    }
 
                     using (MySqlDataReader getNamaReader = getNamaCmd.ExecuteReader())
                     {
                         if (getNamaReader.Read())
                         {
-                            string nama = getNamaReader["nama"].ToString();
-                            Session.SetLoggedInUser(email, nama);
+                            nama = getNamaReader["nama"].ToString();
                         }
                     }
+
+                    Session.SetLoggedInUser(email, nama, event_);
 
                     using (MySqlDataReader getPangkatReader = getPangkatCmd.ExecuteReader())
                     {
@@ -84,28 +100,20 @@ namespace Attendance
 
                             if (pangkat == "admin")
                             {
-                                if (adminWindowInstance == null || adminWindowInstance.IsDisposed)
-                                {
-                                    adminWindowInstance = new AdminWindow();
-                                    adminWindowInstance.Show();
-                                }
-                                else
-                                {
-                                    adminWindowInstance.BringToFront();
-                                }
+                                var adminWindow = new AdminWindow();
+                                adminWindow.Show();
+                                warning.Text = null;
+                            }
+                            else if (pangkat == "operator")
+                            {
+                                var operatorWindow = new OperatorWindow();
+                                operatorWindow.Show();
                                 warning.Text = null;
                             }
                             else
                             {
-                                if (memberWindowInstance == null || memberWindowInstance.IsDisposed)
-                                {
-                                    memberWindowInstance = new MemberWindow();
-                                    memberWindowInstance.Show();
-                                }
-                                else
-                                {
-                                    memberWindowInstance.BringToFront();
-                                }
+                                var participantWindow = new ParticipantWindow();
+                                participantWindow.Show();
                                 warning.Text = null;
                             }
                             this.Hide();
