@@ -84,7 +84,6 @@
             this.label5.Size = new System.Drawing.Size(200, 20);
             this.label5.TabIndex = 37;
             this.label5.Text = "DELETE ATTENDANCE";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label7
             // 
@@ -95,7 +94,6 @@
             this.label7.Size = new System.Drawing.Size(20, 13);
             this.label7.TabIndex = 36;
             this.label7.Text = "ID";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // IDBoxDel
             // 
@@ -103,7 +101,6 @@
             this.IDBoxDel.Name = "IDBoxDel";
             this.IDBoxDel.Size = new System.Drawing.Size(294, 20);
             this.IDBoxDel.TabIndex = 35;
-            this.IDBoxDel.TextChanged += new System.EventHandler(this.IDBoxDel_TextChanged);
             // 
             // btnDel
             // 
@@ -124,7 +121,6 @@
             this.label2.Size = new System.Drawing.Size(172, 20);
             this.label2.TabIndex = 33;
             this.label2.Text = "EDIT ATTENDANCE";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // rbAbsentEdit
             // 
@@ -136,7 +132,6 @@
             this.rbAbsentEdit.TabStop = true;
             this.rbAbsentEdit.Text = "Absent";
             this.rbAbsentEdit.UseVisualStyleBackColor = true;
-            this.rbAbsentEdit.CheckedChanged += new System.EventHandler(this.rbAbsentEdit_CheckedChanged);
             // 
             // rbIzinEdit
             // 
@@ -148,7 +143,6 @@
             this.rbIzinEdit.TabStop = true;
             this.rbIzinEdit.Text = "Izin";
             this.rbIzinEdit.UseVisualStyleBackColor = true;
-            this.rbIzinEdit.CheckedChanged += new System.EventHandler(this.rbIzinEdit_CheckedChanged);
             // 
             // rbHadirEdit
             // 
@@ -160,7 +154,6 @@
             this.rbHadirEdit.TabStop = true;
             this.rbHadirEdit.Text = "Hadir";
             this.rbHadirEdit.UseVisualStyleBackColor = true;
-            this.rbHadirEdit.CheckedChanged += new System.EventHandler(this.rbHadirEdit_CheckedChanged);
             // 
             // label3
             // 
@@ -171,7 +164,6 @@
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 29;
             this.label3.Text = "Attendance";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
@@ -182,7 +174,6 @@
             this.label1.Size = new System.Drawing.Size(20, 13);
             this.label1.TabIndex = 28;
             this.label1.Text = "ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // IDBoxEdit
             // 
@@ -190,7 +181,6 @@
             this.IDBoxEdit.Name = "IDBoxEdit";
             this.IDBoxEdit.Size = new System.Drawing.Size(294, 20);
             this.IDBoxEdit.TabIndex = 27;
-            this.IDBoxEdit.TextChanged += new System.EventHandler(this.IDBoxEdit_TextChanged);
             // 
             // btnEdit
             // 
@@ -211,7 +201,6 @@
             this.label4.Size = new System.Drawing.Size(169, 20);
             this.label4.TabIndex = 38;
             this.label4.Text = "ADD ATTENDANCE";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // addAttBox
             // 
@@ -219,7 +208,6 @@
             this.addAttBox.Name = "addAttBox";
             this.addAttBox.Size = new System.Drawing.Size(294, 20);
             this.addAttBox.TabIndex = 39;
-            this.addAttBox.TextChanged += new System.EventHandler(this.addAttBox_TextChanged);
             // 
             // label6
             // 
@@ -230,7 +218,6 @@
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 40;
             this.label6.Text = "Name";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // rbAbsentAdd
             // 
@@ -242,7 +229,6 @@
             this.rbAbsentAdd.TabStop = true;
             this.rbAbsentAdd.Text = "Absent";
             this.rbAbsentAdd.UseVisualStyleBackColor = true;
-            this.rbAbsentAdd.CheckedChanged += new System.EventHandler(this.rbAbsentAdd_CheckedChanged);
             // 
             // rbIzinAdd
             // 
@@ -254,7 +240,6 @@
             this.rbIzinAdd.TabStop = true;
             this.rbIzinAdd.Text = "Izin";
             this.rbIzinAdd.UseVisualStyleBackColor = true;
-            this.rbIzinAdd.CheckedChanged += new System.EventHandler(this.rbIzinAdd_CheckedChanged);
             // 
             // rbHadirAdd
             // 
@@ -266,7 +251,6 @@
             this.rbHadirAdd.TabStop = true;
             this.rbHadirAdd.Text = "Hadir";
             this.rbHadirAdd.UseVisualStyleBackColor = true;
-            this.rbHadirAdd.CheckedChanged += new System.EventHandler(this.rbHadirAdd_CheckedChanged);
             // 
             // label8
             // 
@@ -277,7 +261,6 @@
             this.label8.Size = new System.Drawing.Size(72, 13);
             this.label8.TabIndex = 42;
             this.label8.Text = "Attendance";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // btnAdd
             // 
@@ -390,7 +373,6 @@
             this.cbAddAtt.Name = "cbAddAtt";
             this.cbAddAtt.Size = new System.Drawing.Size(294, 21);
             this.cbAddAtt.TabIndex = 56;
-            this.cbAddAtt.SelectedIndexChanged += new System.EventHandler(this.cbAddAtt_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -401,7 +383,6 @@
             this.label12.Size = new System.Drawing.Size(40, 13);
             this.label12.TabIndex = 57;
             this.label12.Text = "Event";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // rbTelatEdit
             // 
@@ -413,7 +394,6 @@
             this.rbTelatEdit.TabStop = true;
             this.rbTelatEdit.Text = "Telat";
             this.rbTelatEdit.UseVisualStyleBackColor = true;
-            this.rbTelatEdit.CheckedChanged += new System.EventHandler(this.rbTelatEdit_CheckedChanged);
             // 
             // rbTelatAdd
             // 
@@ -425,7 +405,6 @@
             this.rbTelatAdd.TabStop = true;
             this.rbTelatAdd.Text = "Telat";
             this.rbTelatAdd.UseVisualStyleBackColor = true;
-            this.rbTelatAdd.CheckedChanged += new System.EventHandler(this.rbTelatAdd_CheckedChanged);
             // 
             // eventLocBox
             // 
