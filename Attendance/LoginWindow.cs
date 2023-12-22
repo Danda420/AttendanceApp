@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,6 +40,16 @@ namespace Attendance
             }
         }
 
+        private bool verifyPass(string password, string encryptedPass)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                string passInput = BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+                return passInput == encryptedPass;
+            }
+        }
+
         public LoginForm()
         {
             InitializeComponent();
@@ -55,14 +66,22 @@ namespace Attendance
             if (email != "" && password != "")
             {
                 conn.Open();
-                string query = "SELECT * FROM users WHERE email = @email AND password = @password";
+
+                string query = "SELECT password FROM users WHERE email = @email";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@email", email);
-                cmd.Parameters.AddWithValue("@password", password);
 
-                MySqlDataReader reader = cmd.ExecuteReader();
+                string encryptedPass = null;
 
-                if (reader.Read())
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        encryptedPass = reader["password"].ToString();
+                    }
+                }
+
+                if (encryptedPass != null && verifyPass(password, encryptedPass))
                 {
                     string getNama = "SELECT nama FROM users WHERE email = @email";
                     string getEvent = "SELECT assigned_event FROM users WHERE email = @email";
@@ -76,8 +95,6 @@ namespace Attendance
 
                     string nama = null;
                     string event_ = null;
-
-                    reader.Close();
 
                     using (MySqlDataReader getEventReader = getEventCmd.ExecuteReader())
                     {
@@ -124,7 +141,6 @@ namespace Attendance
                             this.Hide();
                         }
                     }
-                    
                 }
                 else
                 {
@@ -139,7 +155,6 @@ namespace Attendance
                 warning.Text = "Email dan Password harus diisi!";
             }
         }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {

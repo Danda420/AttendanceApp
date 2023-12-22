@@ -30,4 +30,4 @@ CREATE TABLE `events` (
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO users (email, nama, pangkat, password) VALUES ('admin@gmail.com', 'danda', 'admin', 'admin')
+INSERT INTO users (email, nama, pangkat, password) VALUES ('admin@gmail.com', 'danda', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918')

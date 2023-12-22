@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -31,6 +32,15 @@ namespace Attendance
 
             koneksi = new Koneksi();
             conn = koneksi.conn;
+        }
+
+        public string encryptPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashB= sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashB).Replace("-", "").ToLower();
+            }
         }
 
         public void updateTable()
@@ -59,7 +69,8 @@ namespace Attendance
             string nama = NamaBox.Text.ToString();
             string pangkat = PangkatBox.Text.ToString();
             string event_ = comboBox1.Text;
-            string password = PasswordBox.Text.ToString();
+            string RAWpassword = PasswordBox.Text.ToString();
+            string password = encryptPassword(RAWpassword);
 
             if (email != "" && nama != "" && pangkat != "" && password != "")
             {
