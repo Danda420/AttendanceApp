@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Attendance.Class;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,9 @@ namespace Attendance
 {
     public partial class ManageAccounts : Form
     {
-        public MySqlConnection conn = new MySqlConnection("server=127.0.0.1;user=root;database=attendance;password=");
+        private Koneksi koneksi;
+        MySqlConnection conn;
+
         MySqlCommand checkUname = new MySqlCommand();
         MySqlCommand cmd = new MySqlCommand();
         private MySqlDataAdapter adapter;
@@ -25,6 +28,9 @@ namespace Attendance
         public ManageAccounts()
         {
             InitializeComponent();
+
+            koneksi = new Koneksi();
+            conn = koneksi.conn;
         }
 
         public void updateTable()

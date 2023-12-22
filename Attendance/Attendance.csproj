@@ -113,6 +113,8 @@
     <Compile Include="AttendanceManager.Designer.cs">
       <DependentUpon>AttendanceManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Koneksi.cs" />
+    <Compile Include="Class\UpdateStuff.cs" />
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>

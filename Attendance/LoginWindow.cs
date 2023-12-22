@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Attendance.Class;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -14,7 +15,8 @@ namespace Attendance
 {
     public partial class LoginForm : Form
     {
-        public MySqlConnection conn = new MySqlConnection("server=127.0.0.1;user=root;database=attendance;password=");
+        private Koneksi koneksi;
+        MySqlConnection conn;
 
         public class Session
         {
@@ -40,6 +42,9 @@ namespace Attendance
         public LoginForm()
         {
             InitializeComponent();
+
+            koneksi = new Koneksi();
+            conn = koneksi.conn;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
