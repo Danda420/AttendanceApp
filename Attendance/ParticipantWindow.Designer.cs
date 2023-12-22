@@ -62,7 +62,7 @@
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(12, 8);
+            this.Email.Location = new System.Drawing.Point(9, 8);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(46, 16);
             this.Email.TabIndex = 2;
@@ -94,7 +94,7 @@
             // 
             this.lblNama.AutoSize = true;
             this.lblNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNama.Location = new System.Drawing.Point(12, 38);
+            this.lblNama.Location = new System.Drawing.Point(9, 38);
             this.lblNama.Name = "lblNama";
             this.lblNama.Size = new System.Drawing.Size(48, 16);
             this.lblNama.TabIndex = 5;
@@ -180,28 +180,28 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 92);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 92);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.144939F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.85506F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(877, 487);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(882, 487);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(616, 28);
+            this.dataGridView2.Location = new System.Drawing.Point(620, 28);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(258, 456);
+            this.dataGridView2.Size = new System.Drawing.Size(259, 456);
             this.dataGridView2.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(616, 0);
+            this.label3.Location = new System.Drawing.Point(620, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 16);
             this.label3.TabIndex = 2;
@@ -213,7 +213,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(607, 456);
+            this.dataGridView1.Size = new System.Drawing.Size(611, 456);
             this.dataGridView1.TabIndex = 3;
             // 
             // ParticipantWindow
@@ -233,7 +233,7 @@
             this.Controls.Add(this.btnAbsen);
             this.Controls.Add(this.Email);
             this.Name = "ParticipantWindow";
-            this.Text = "Member";
+            this.Text = "Participant";
             this.Load += new System.EventHandler(this.Member_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
