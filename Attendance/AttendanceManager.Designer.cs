@@ -99,14 +99,14 @@
             // 
             this.IDBoxDel.Location = new System.Drawing.Point(14, 452);
             this.IDBoxDel.Name = "IDBoxDel";
-            this.IDBoxDel.Size = new System.Drawing.Size(294, 20);
+            this.IDBoxDel.Size = new System.Drawing.Size(320, 20);
             this.IDBoxDel.TabIndex = 35;
             // 
             // btnDel
             // 
             this.btnDel.Location = new System.Drawing.Point(14, 478);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(294, 23);
+            this.btnDel.Size = new System.Drawing.Size(320, 23);
             this.btnDel.TabIndex = 34;
             this.btnDel.Text = "DELETE";
             this.btnDel.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 235);
+            this.label2.Location = new System.Drawing.Point(88, 235);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 20);
             this.label2.TabIndex = 33;
@@ -179,14 +179,14 @@
             // 
             this.IDBoxEdit.Location = new System.Drawing.Point(14, 277);
             this.IDBoxEdit.Name = "IDBoxEdit";
-            this.IDBoxEdit.Size = new System.Drawing.Size(294, 20);
+            this.IDBoxEdit.Size = new System.Drawing.Size(320, 20);
             this.IDBoxEdit.TabIndex = 27;
             // 
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(14, 358);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(294, 23);
+            this.btnEdit.Size = new System.Drawing.Size(320, 23);
             this.btnEdit.TabIndex = 26;
             this.btnEdit.Text = "Submit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(80, 9);
+            this.label4.Location = new System.Drawing.Point(91, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 20);
             this.label4.TabIndex = 38;
@@ -206,7 +206,7 @@
             // 
             this.addAttBox.Location = new System.Drawing.Point(14, 58);
             this.addAttBox.Name = "addAttBox";
-            this.addAttBox.Size = new System.Drawing.Size(294, 20);
+            this.addAttBox.Size = new System.Drawing.Size(320, 20);
             this.addAttBox.TabIndex = 39;
             // 
             // label6
@@ -266,7 +266,7 @@
             // 
             this.btnAdd.Location = new System.Drawing.Point(14, 181);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(294, 23);
+            this.btnAdd.Size = new System.Drawing.Size(320, 23);
             this.btnAdd.TabIndex = 41;
             this.btnAdd.Text = "Submit";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(103, 517);
+            this.label9.Location = new System.Drawing.Point(118, 521);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 20);
             this.label9.TabIndex = 46;
@@ -288,7 +288,7 @@
             this.eventAddBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.eventAddBox.Location = new System.Drawing.Point(15, 563);
             this.eventAddBox.Name = "eventAddBox";
-            this.eventAddBox.Size = new System.Drawing.Size(294, 20);
+            this.eventAddBox.Size = new System.Drawing.Size(320, 20);
             this.eventAddBox.TabIndex = 47;
             // 
             // label10
@@ -305,9 +305,9 @@
             // btnEventAdd
             // 
             this.btnEventAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEventAdd.Location = new System.Drawing.Point(14, 688);
+            this.btnEventAdd.Location = new System.Drawing.Point(15, 684);
             this.btnEventAdd.Name = "btnEventAdd";
-            this.btnEventAdd.Size = new System.Drawing.Size(295, 23);
+            this.btnEventAdd.Size = new System.Drawing.Size(320, 23);
             this.btnEventAdd.TabIndex = 49;
             this.btnEventAdd.Text = "Submit";
             this.btnEventAdd.UseVisualStyleBackColor = true;
@@ -371,7 +371,7 @@
             this.cbAddAtt.FormattingEnabled = true;
             this.cbAddAtt.Location = new System.Drawing.Point(14, 105);
             this.cbAddAtt.Name = "cbAddAtt";
-            this.cbAddAtt.Size = new System.Drawing.Size(294, 21);
+            this.cbAddAtt.Size = new System.Drawing.Size(320, 21);
             this.cbAddAtt.TabIndex = 56;
             // 
             // label12
@@ -411,7 +411,7 @@
             this.eventLocBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.eventLocBox.Location = new System.Drawing.Point(15, 611);
             this.eventLocBox.Name = "eventLocBox";
-            this.eventLocBox.Size = new System.Drawing.Size(294, 20);
+            this.eventLocBox.Size = new System.Drawing.Size(320, 20);
             this.eventLocBox.TabIndex = 60;
             // 
             // label13
@@ -441,7 +441,7 @@
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTimePicker1.Location = new System.Drawing.Point(15, 658);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(293, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(320, 20);
             this.dateTimePicker1.TabIndex = 64;
             // 
             // dataGridView2
@@ -459,7 +459,7 @@
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(91, 742);
+            this.label15.Location = new System.Drawing.Point(104, 742);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(141, 20);
             this.label15.TabIndex = 69;
@@ -481,7 +481,7 @@
             this.eventIDBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.eventIDBox.Location = new System.Drawing.Point(14, 778);
             this.eventIDBox.Name = "eventIDBox";
-            this.eventIDBox.Size = new System.Drawing.Size(294, 20);
+            this.eventIDBox.Size = new System.Drawing.Size(320, 20);
             this.eventIDBox.TabIndex = 67;
             // 
             // btnDelEvent
@@ -489,7 +489,7 @@
             this.btnDelEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDelEvent.Location = new System.Drawing.Point(14, 805);
             this.btnDelEvent.Name = "btnDelEvent";
-            this.btnDelEvent.Size = new System.Drawing.Size(294, 23);
+            this.btnDelEvent.Size = new System.Drawing.Size(320, 23);
             this.btnDelEvent.TabIndex = 66;
             this.btnDelEvent.Text = "DELETE";
             this.btnDelEvent.UseVisualStyleBackColor = true;

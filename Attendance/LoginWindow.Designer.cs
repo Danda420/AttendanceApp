@@ -35,13 +35,16 @@
             this.PasswordBox = new System.Windows.Forms.TextBox();
             this.warning = new System.Windows.Forms.Label();
             this.passCheckbox = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 21);
+            this.label1.Location = new System.Drawing.Point(299, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 0;
@@ -49,9 +52,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 92);
+            this.label2.Location = new System.Drawing.Point(299, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 16);
             this.label2.TabIndex = 1;
@@ -59,9 +63,11 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(12, 171);
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(302, 198);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(252, 32);
+            this.btnLogin.Size = new System.Drawing.Size(358, 35);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -69,44 +75,61 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(12, 49);
+            this.EmailBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmailBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailBox.Location = new System.Drawing.Point(302, 60);
             this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(252, 20);
+            this.EmailBox.Size = new System.Drawing.Size(358, 31);
             this.EmailBox.TabIndex = 3;
             // 
             // PasswordBox
             // 
-            this.PasswordBox.Location = new System.Drawing.Point(12, 121);
+            this.PasswordBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PasswordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordBox.Location = new System.Drawing.Point(302, 132);
             this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.Size = new System.Drawing.Size(252, 20);
+            this.PasswordBox.Size = new System.Drawing.Size(358, 31);
             this.PasswordBox.TabIndex = 4;
             // 
             // warning
             // 
+            this.warning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.warning.AutoSize = true;
-            this.warning.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warning.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warning.ForeColor = System.Drawing.Color.Red;
-            this.warning.Location = new System.Drawing.Point(10, 214);
+            this.warning.Location = new System.Drawing.Point(300, 248);
             this.warning.Name = "warning";
-            this.warning.Size = new System.Drawing.Size(0, 16);
+            this.warning.Size = new System.Drawing.Size(0, 25);
             this.warning.TabIndex = 5;
             // 
             // passCheckbox
             // 
+            this.passCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.passCheckbox.AutoSize = true;
-            this.passCheckbox.Location = new System.Drawing.Point(13, 148);
+            this.passCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passCheckbox.Location = new System.Drawing.Point(302, 169);
             this.passCheckbox.Name = "passCheckbox";
-            this.passCheckbox.Size = new System.Drawing.Size(102, 17);
+            this.passCheckbox.Size = new System.Drawing.Size(135, 20);
             this.passCheckbox.TabIndex = 7;
             this.passCheckbox.Text = "Show Password";
             this.passCheckbox.UseVisualStyleBackColor = true;
             this.passCheckbox.CheckedChanged += new System.EventHandler(this.passCheckbox_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Attendance.Properties.Resources.login_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(266, 275);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 278);
+            this.ClientSize = new System.Drawing.Size(672, 300);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.passCheckbox);
             this.Controls.Add(this.warning);
             this.Controls.Add(this.PasswordBox);
@@ -119,6 +142,7 @@
             this.Name = "LoginForm";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +157,7 @@
         private System.Windows.Forms.TextBox PasswordBox;
         private System.Windows.Forms.Label warning;
         private System.Windows.Forms.CheckBox passCheckbox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

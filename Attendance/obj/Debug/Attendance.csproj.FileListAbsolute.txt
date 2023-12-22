@@ -41,5 +41,8 @@ C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.Log
 C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.csproj.CopyComplete
 C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.exe
 C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.pdb
-C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.MemberWindow.resources
-C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.RegisterWindow.resources
+C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.AdminWindow.resources
+C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.AttendanceManager.resources
+C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.OperatorWindow.resources
+C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.ParticipantWindow.resources
+C:\Users\danda\Desktop\PRJ\UAS\AttendanceApp\Attendance\obj\Debug\Attendance.ManageAccounts.resources

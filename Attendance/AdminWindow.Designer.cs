@@ -40,11 +40,11 @@
             // 
             this.btnManageAcc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnManageAcc.Location = new System.Drawing.Point(12, 251);
+            this.btnManageAcc.Location = new System.Drawing.Point(12, 198);
             this.btnManageAcc.Name = "btnManageAcc";
-            this.btnManageAcc.Size = new System.Drawing.Size(513, 23);
+            this.btnManageAcc.Size = new System.Drawing.Size(513, 43);
             this.btnManageAcc.TabIndex = 9;
-            this.btnManageAcc.Text = "Manage accounts";
+            this.btnManageAcc.Text = "Manage Accounts";
             this.btnManageAcc.UseVisualStyleBackColor = true;
             this.btnManageAcc.Click += new System.EventHandler(this.btnManageAcc_Click);
             // 
@@ -64,9 +64,9 @@
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(12, 280);
+            this.btnLogout.Location = new System.Drawing.Point(12, 265);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(513, 23);
+            this.btnLogout.Size = new System.Drawing.Size(513, 43);
             this.btnLogout.TabIndex = 11;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -96,11 +96,11 @@
             // 
             this.btnManageAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnManageAttendance.Location = new System.Drawing.Point(12, 222);
+            this.btnManageAttendance.Location = new System.Drawing.Point(12, 149);
             this.btnManageAttendance.Name = "btnManageAttendance";
-            this.btnManageAttendance.Size = new System.Drawing.Size(513, 23);
+            this.btnManageAttendance.Size = new System.Drawing.Size(513, 43);
             this.btnManageAttendance.TabIndex = 14;
-            this.btnManageAttendance.Text = "Manage attendance";
+            this.btnManageAttendance.Text = "Manage Attendance";
             this.btnManageAttendance.UseVisualStyleBackColor = true;
             this.btnManageAttendance.Click += new System.EventHandler(this.btnManageAttendance_Click);
             // 
