@@ -55,6 +55,7 @@
             this.Nama = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.Event = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -306,7 +307,7 @@
             // 
             this.Nama.AutoSize = true;
             this.Nama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nama.Location = new System.Drawing.Point(6, 62);
+            this.Nama.Location = new System.Drawing.Point(6, 70);
             this.Nama.Name = "Nama";
             this.Nama.Size = new System.Drawing.Size(48, 16);
             this.Nama.TabIndex = 85;
@@ -316,7 +317,7 @@
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(8, 35);
+            this.Email.Location = new System.Drawing.Point(8, 43);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(46, 16);
             this.Email.TabIndex = 86;
@@ -326,17 +327,28 @@
             // 
             this.Event.AutoSize = true;
             this.Event.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Event.Location = new System.Drawing.Point(6, 92);
+            this.Event.Location = new System.Drawing.Point(6, 100);
             this.Event.Name = "Event";
             this.Event.Size = new System.Drawing.Size(46, 16);
             this.Event.TabIndex = 87;
             this.Event.Text = "Event";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(9, 6);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 88;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.button1_Click);
             // 
             // OperatorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 593);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.Event);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.Nama);
@@ -402,5 +414,6 @@
         private System.Windows.Forms.Label Nama;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label Event;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

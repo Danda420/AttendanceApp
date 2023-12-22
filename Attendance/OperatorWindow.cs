@@ -146,5 +146,15 @@ namespace Attendance
 
             updateTable();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoginForm.Session.destroySession();
+
+            LoginForm loginWindowInstance = new LoginForm();
+            loginWindowInstance.Show();
+
+            this.Close();
+        }
     }
 }
