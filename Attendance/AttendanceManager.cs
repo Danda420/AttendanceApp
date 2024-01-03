@@ -34,26 +34,6 @@ namespace Attendance
             conn = koneksi.conn;
         }
 
-        private void updateComboBox()
-        {
-            cBoxDisplay.Items.Clear();
-            cbAddAtt.Items.Clear();
-
-            conn.Open();
-
-            string query = "SELECT * FROM events";
-            cmd = new MySqlCommand(query, conn);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            
-            while (reader.Read())
-            {
-                cBoxDisplay.Items.Add(reader.GetString(1));
-                cbAddAtt.Items.Add(reader.GetString(1));
-            }
-            conn.Close();
-            
-        }
-
         public void updateTable()
         {
             conn.Open();
@@ -68,26 +48,6 @@ namespace Attendance
             dataGridView1.DataSource = dataTable;
 
             foreach (DataGridViewColumn column in dataGridView1.Columns)
-            {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
-            conn.Close();
-        }
-
-        public void updateEventTable()
-        {
-            conn.Open();
-            string query = $"SELECT * FROM events";
-            cmd = new MySqlCommand(query, conn);
-
-            adapter = new MySqlDataAdapter(cmd);
-            dataTable = new DataTable();
-
-            adapter.Fill(dataTable);
-
-            dataGridView2.DataSource = dataTable;
-
-            foreach (DataGridViewColumn column in dataGridView2.Columns)
             {
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
@@ -199,24 +159,6 @@ namespace Attendance
             }
         }
 
-        private void btnEventAdd_Click(object sender, EventArgs e)
-        {
-            string event_ = eventAddBox.Text.ToString();
-            string location = eventLocBox.Text.ToString();
-            string date = dateTimePicker1.Value.ToString("yy-MM-dd");
-
-            conn.Open();
-            string addEvent = $"INSERT INTO events (event, location, date) VALUES ('{event_}', '{location}', '{date}')";
-            cmd = new MySqlCommand(addEvent, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            eventAddBox.Clear();
-            eventLocBox.Clear();
-
-            updateComboBox();
-            updateEventTable();
-        }
-
         private void btnExport_Click(object sender, EventArgs e)
         {
             DataGridView dataGridView = dataGridView1;
@@ -257,27 +199,7 @@ namespace Attendance
 
         private void AttendanceManager_Load(object sender, EventArgs e)
         {
-            updateComboBox();
             updateTable();
-            updateEventTable();
-        }
-
-        private void btnDelEvent_Click(object sender, EventArgs e)
-        {
-            string id = eventIDBox.Text.ToString();
-
-            if (id != "")
-            {
-                conn.Open();
-                string delEvent = $"DELETE FROM events WHERE id = {id}";
-                cmd = new MySqlCommand(delEvent, conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                eventIDBox.Clear();
-
-                updateEventTable();
-                updateComboBox();
-            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -132,6 +132,18 @@ namespace Attendance
 
             string event_ = cBoxEvent.Text;
 
+            if (event_ == "")
+            {
+                MessageBox.Show("select an event first!");
+                return;
+            }
+
+            if (status == null)
+            {
+                MessageBox.Show("select status first! (hadir, izin, absent, telat)");
+                return;
+            }
+
             conn.Open();
             string getTime = "SELECT time FROM attendance WHERE nama = @nama AND event = @event ORDER BY date DESC, time DESC LIMIT 1";
             MySqlCommand getTimeCmd = new MySqlCommand(getTime, conn);
@@ -153,6 +165,10 @@ namespace Attendance
                         getTimeReader.Close();
                         cmd.ExecuteNonQuery();
                         updateTable();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Oops, you can only record your attendance only once per hour on each event!");
                     }
                 }
                 else if (!getTimeReader.HasRows)

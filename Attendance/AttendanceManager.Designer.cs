@@ -48,10 +48,6 @@
             this.rbHadirAdd = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.eventAddBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnEventAdd = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cBoxDisplay = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -61,25 +57,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.rbTelatEdit = new System.Windows.Forms.RadioButton();
             this.rbTelatAdd = new System.Windows.Forms.RadioButton();
-            this.eventLocBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.eventIDBox = new System.Windows.Forms.TextBox();
-            this.btnDelEvent = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(68, 406);
+            this.label5.Location = new System.Drawing.Point(68, 461);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(200, 20);
             this.label5.TabIndex = 37;
@@ -89,7 +75,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(11, 436);
+            this.label7.Location = new System.Drawing.Point(11, 491);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(20, 13);
             this.label7.TabIndex = 36;
@@ -97,14 +83,14 @@
             // 
             // IDBoxDel
             // 
-            this.IDBoxDel.Location = new System.Drawing.Point(14, 452);
+            this.IDBoxDel.Location = new System.Drawing.Point(14, 507);
             this.IDBoxDel.Name = "IDBoxDel";
             this.IDBoxDel.Size = new System.Drawing.Size(320, 20);
             this.IDBoxDel.TabIndex = 35;
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(14, 478);
+            this.btnDel.Location = new System.Drawing.Point(14, 533);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(320, 23);
             this.btnDel.TabIndex = 34;
@@ -116,7 +102,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 235);
+            this.label2.Location = new System.Drawing.Point(88, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 20);
             this.label2.TabIndex = 33;
@@ -125,7 +111,7 @@
             // rbAbsentEdit
             // 
             this.rbAbsentEdit.AutoSize = true;
-            this.rbAbsentEdit.Location = new System.Drawing.Point(119, 331);
+            this.rbAbsentEdit.Location = new System.Drawing.Point(119, 346);
             this.rbAbsentEdit.Name = "rbAbsentEdit";
             this.rbAbsentEdit.Size = new System.Drawing.Size(58, 17);
             this.rbAbsentEdit.TabIndex = 32;
@@ -136,7 +122,7 @@
             // rbIzinEdit
             // 
             this.rbIzinEdit.AutoSize = true;
-            this.rbIzinEdit.Location = new System.Drawing.Point(72, 331);
+            this.rbIzinEdit.Location = new System.Drawing.Point(72, 346);
             this.rbIzinEdit.Name = "rbIzinEdit";
             this.rbIzinEdit.Size = new System.Drawing.Size(41, 17);
             this.rbIzinEdit.TabIndex = 31;
@@ -147,7 +133,7 @@
             // rbHadirEdit
             // 
             this.rbHadirEdit.AutoSize = true;
-            this.rbHadirEdit.Location = new System.Drawing.Point(17, 331);
+            this.rbHadirEdit.Location = new System.Drawing.Point(17, 346);
             this.rbHadirEdit.Name = "rbHadirEdit";
             this.rbHadirEdit.Size = new System.Drawing.Size(50, 17);
             this.rbHadirEdit.TabIndex = 30;
@@ -159,7 +145,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 315);
+            this.label3.Location = new System.Drawing.Point(14, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 29;
@@ -169,7 +155,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 261);
+            this.label1.Location = new System.Drawing.Point(11, 276);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 13);
             this.label1.TabIndex = 28;
@@ -177,14 +163,14 @@
             // 
             // IDBoxEdit
             // 
-            this.IDBoxEdit.Location = new System.Drawing.Point(14, 277);
+            this.IDBoxEdit.Location = new System.Drawing.Point(14, 292);
             this.IDBoxEdit.Name = "IDBoxEdit";
             this.IDBoxEdit.Size = new System.Drawing.Size(320, 20);
             this.IDBoxEdit.TabIndex = 27;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(14, 358);
+            this.btnEdit.Location = new System.Drawing.Point(14, 373);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(320, 23);
             this.btnEdit.TabIndex = 26;
@@ -272,47 +258,6 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(118, 521);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 20);
-            this.label9.TabIndex = 46;
-            this.label9.Text = "ADD EVENT";
-            // 
-            // eventAddBox
-            // 
-            this.eventAddBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.eventAddBox.Location = new System.Drawing.Point(15, 563);
-            this.eventAddBox.Name = "eventAddBox";
-            this.eventAddBox.Size = new System.Drawing.Size(320, 20);
-            this.eventAddBox.TabIndex = 47;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(11, 547);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 13);
-            this.label10.TabIndex = 48;
-            this.label10.Text = "EVENT NAME";
-            // 
-            // btnEventAdd
-            // 
-            this.btnEventAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEventAdd.Location = new System.Drawing.Point(15, 684);
-            this.btnEventAdd.Name = "btnEventAdd";
-            this.btnEventAdd.Size = new System.Drawing.Size(320, 23);
-            this.btnEventAdd.TabIndex = 49;
-            this.btnEventAdd.Text = "Submit";
-            this.btnEventAdd.UseVisualStyleBackColor = true;
-            this.btnEventAdd.Click += new System.EventHandler(this.btnEventAdd_Click);
-            // 
             // label11
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -341,7 +286,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(365, 42);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(614, 490);
+            this.dataGridView1.Size = new System.Drawing.Size(614, 485);
             this.dataGridView1.TabIndex = 53;
             // 
             // btnShow
@@ -358,7 +303,7 @@
             // btnExport
             // 
             this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExport.Location = new System.Drawing.Point(365, 805);
+            this.btnExport.Location = new System.Drawing.Point(365, 534);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(614, 23);
             this.btnExport.TabIndex = 55;
@@ -387,7 +332,7 @@
             // rbTelatEdit
             // 
             this.rbTelatEdit.AutoSize = true;
-            this.rbTelatEdit.Location = new System.Drawing.Point(183, 331);
+            this.rbTelatEdit.Location = new System.Drawing.Point(183, 346);
             this.rbTelatEdit.Name = "rbTelatEdit";
             this.rbTelatEdit.Size = new System.Drawing.Size(49, 17);
             this.rbTelatEdit.TabIndex = 58;
@@ -406,95 +351,6 @@
             this.rbTelatAdd.Text = "Telat";
             this.rbTelatAdd.UseVisualStyleBackColor = true;
             // 
-            // eventLocBox
-            // 
-            this.eventLocBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.eventLocBox.Location = new System.Drawing.Point(15, 611);
-            this.eventLocBox.Name = "eventLocBox";
-            this.eventLocBox.Size = new System.Drawing.Size(320, 20);
-            this.eventLocBox.TabIndex = 60;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(11, 595);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 13);
-            this.label13.TabIndex = 62;
-            this.label13.Text = "LOCATION";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(11, 641);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(40, 13);
-            this.label14.TabIndex = 63;
-            this.label14.Text = "DATE";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(15, 658);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(320, 20);
-            this.dateTimePicker1.TabIndex = 64;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(365, 538);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(614, 261);
-            this.dataGridView2.TabIndex = 65;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(104, 742);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(141, 20);
-            this.label15.TabIndex = 69;
-            this.label15.Text = "DELETE EVENT";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(11, 762);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(20, 13);
-            this.label16.TabIndex = 68;
-            this.label16.Text = "ID";
-            // 
-            // eventIDBox
-            // 
-            this.eventIDBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.eventIDBox.Location = new System.Drawing.Point(14, 778);
-            this.eventIDBox.Name = "eventIDBox";
-            this.eventIDBox.Size = new System.Drawing.Size(320, 20);
-            this.eventIDBox.TabIndex = 67;
-            // 
-            // btnDelEvent
-            // 
-            this.btnDelEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDelEvent.Location = new System.Drawing.Point(14, 805);
-            this.btnDelEvent.Name = "btnDelEvent";
-            this.btnDelEvent.Size = new System.Drawing.Size(320, 23);
-            this.btnDelEvent.TabIndex = 66;
-            this.btnDelEvent.Text = "DELETE";
-            this.btnDelEvent.UseVisualStyleBackColor = true;
-            this.btnDelEvent.Click += new System.EventHandler(this.btnDelEvent_Click);
-            // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -510,17 +366,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 833);
+            this.ClientSize = new System.Drawing.Size(991, 562);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.eventIDBox);
-            this.Controls.Add(this.btnDelEvent);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.eventLocBox);
             this.Controls.Add(this.rbTelatAdd);
             this.Controls.Add(this.rbTelatEdit);
             this.Controls.Add(this.label12);
@@ -530,10 +377,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cBoxDisplay);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnEventAdd);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.eventAddBox);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.rbAbsentAdd);
             this.Controls.Add(this.rbIzinAdd);
             this.Controls.Add(this.rbHadirAdd);
@@ -558,7 +401,6 @@
             this.Text = "Attendance Manager";
             this.Load += new System.EventHandler(this.AttendanceManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -586,10 +428,6 @@
         private System.Windows.Forms.RadioButton rbHadirAdd;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox eventAddBox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnEventAdd;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cBoxDisplay;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -599,15 +437,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton rbTelatEdit;
         private System.Windows.Forms.RadioButton rbTelatAdd;
-        private System.Windows.Forms.TextBox eventLocBox;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox eventIDBox;
-        private System.Windows.Forms.Button btnDelEvent;
         private System.Windows.Forms.Button btnBack;
     }
 }

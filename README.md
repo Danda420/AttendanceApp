@@ -12,8 +12,8 @@ password: admin
 - Admin
   - Login with secure credentials
   - Create, Modify, Delete Attendance (managing attendances)
-  - Create & Delete Events (managing events)
-  - Create, Delete Accounts (managing accounts)
+  - Create, Modify, Delete Events (managing events)
+  - Create, Modify, Delete Accounts (managing accounts)
   - View all attendance and events
   - Export attendance records to excel
 
@@ -34,15 +34,19 @@ password: admin
 
 - Admin main window
 
-![admin](https://github.com/Danda420/AttendanceApp/assets/118007132/018adb26-25f6-409f-97bf-bd0508811165)
+![admin](https://github.com/Danda420/AttendanceApp/assets/118007132/9a0f4c3e-3746-4dc4-9dc1-167ffc7ab624)
 
 - Admin Manage Account window
 
-![accounts-manager](https://github.com/Danda420/AttendanceApp/assets/118007132/fe449b2d-4b9a-416e-ab61-1ec0780a887c)
+![accmngr](https://github.com/Danda420/AttendanceApp/assets/118007132/a2687efe-0173-4840-b71a-73fb2d67f523)
 
 - Admin Manage Attendance window
 
-![attendance-manager](https://github.com/Danda420/AttendanceApp/assets/118007132/195a3ffa-85ea-4dd6-897a-e5488335640b)
+![attmgr](https://github.com/Danda420/AttendanceApp/assets/118007132/ff8256a8-b208-4397-bf3b-f8538f5ff215)
+
+- Admin Manage Events window
+
+![evntmgr](https://github.com/Danda420/AttendanceApp/assets/118007132/bf040000-f53c-49bd-8c83-f0b72ede3630)
 
 - Operator window
 

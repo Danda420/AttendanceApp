@@ -52,5 +52,12 @@ namespace Attendance
             var mngAtt = new AttendanceManager();
             mngAtt.Show();  
         }
+
+        private void btnEvents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var mngEvents = new EventManager();
+            mngEvents.Show();
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
 
 namespace Attendance
 {
@@ -105,11 +106,10 @@ namespace Attendance
             }
         }
 
-        private void Register_Load(object sender, EventArgs e)
+        private void updateComboBox()
         {
-            updateTable();
-
             comboBox1.Items.Clear();
+            eventEdit.Items.Clear();
 
             conn.Open();
 
@@ -120,8 +120,17 @@ namespace Attendance
             while (reader.Read())
             {
                 comboBox1.Items.Add(reader.GetString(1));
+                eventEdit.Items.Add(reader.GetString(1));
             }
             conn.Close();
+
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+            updateTable();
+
+            updateComboBox();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -141,6 +150,87 @@ namespace Attendance
             cmd = new MySqlCommand(delAcc, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
+
+            IDBoxDel.Clear();
+
+            updateTable();
+        }
+
+        private void btnFetch_Click(object sender, EventArgs e)
+        {
+            string id = idEdit.Text.ToString();
+
+            conn.Open();
+            string query = $"SELECT email, nama, pangkat, assigned_event FROM users WHERE id = {id}";
+            cmd = new MySqlCommand(query, conn);
+
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    string email = reader["email"].ToString();
+                    string nama = reader["nama"].ToString();
+                    string pangkat = reader["pangkat"].ToString();
+                    string assigned_event = reader["assigned_event"].ToString();
+
+                    emailEdit.Text = email;
+                    namaEdit.Text = nama;
+                    pangkatEdit.Text = pangkat;
+                    eventEdit.Text = assigned_event;
+
+                    emailEdit.Enabled = true;
+                    namaEdit.Enabled = true;
+                    pangkatEdit.Enabled = true;
+                    eventEdit.Enabled = true;
+                    passEdit.Enabled = true;
+                    btnEdit.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show($"No user found with the id of {id}");
+                    idEdit.Clear();
+                }
+                conn.Close();
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string id = idEdit.Text.ToString();
+            string email = emailEdit.Text.ToString();
+            string nama = namaEdit.Text.ToString();
+            string pangkat = pangkatEdit.Text.ToString();
+            string assignaed_event = eventEdit.Text.ToString();
+            string RAWpassword = passEdit.Text.ToString();
+            string password = encryptPassword(RAWpassword);
+
+            conn.Open();
+            if (RAWpassword != "" )
+            {
+                string editEvent = $"UPDATE users SET email = '{email}', nama = '{nama}', pangkat = '{pangkat}', assigned_event = '{assignaed_event}', password = '{password}' WHERE id = {id}";
+                cmd = new MySqlCommand(editEvent, conn);
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                string editEvent = $"UPDATE users SET email = '{email}', nama = '{nama}', pangkat = '{pangkat}', assigned_event = '{assignaed_event}' WHERE id = {id}";
+                cmd = new MySqlCommand(editEvent, conn);
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+
+            idEdit.Clear();
+            emailEdit.Clear();
+            namaEdit.Clear();
+            passEdit.Clear();
+            pangkatEdit.Clear();
+
+            emailEdit.Enabled = false;
+            namaEdit.Enabled = false;
+            pangkatEdit.Enabled = false;
+            eventEdit.Enabled = false;
+            passEdit.Enabled = false;
+            btnEdit.Enabled = false;
 
             updateTable();
         }

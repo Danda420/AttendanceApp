@@ -34,13 +34,14 @@
             this.lblNama = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.btnManageAttendance = new System.Windows.Forms.Button();
+            this.btnEvents = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManageAcc
             // 
             this.btnManageAcc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnManageAcc.Location = new System.Drawing.Point(12, 198);
+            this.btnManageAcc.Location = new System.Drawing.Point(12, 233);
             this.btnManageAcc.Name = "btnManageAcc";
             this.btnManageAcc.Size = new System.Drawing.Size(513, 43);
             this.btnManageAcc.TabIndex = 9;
@@ -64,7 +65,7 @@
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(12, 265);
+            this.btnLogout.Location = new System.Drawing.Point(12, 300);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(513, 43);
             this.btnLogout.TabIndex = 11;
@@ -96,7 +97,7 @@
             // 
             this.btnManageAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnManageAttendance.Location = new System.Drawing.Point(12, 149);
+            this.btnManageAttendance.Location = new System.Drawing.Point(12, 135);
             this.btnManageAttendance.Name = "btnManageAttendance";
             this.btnManageAttendance.Size = new System.Drawing.Size(513, 43);
             this.btnManageAttendance.TabIndex = 14;
@@ -104,11 +105,24 @@
             this.btnManageAttendance.UseVisualStyleBackColor = true;
             this.btnManageAttendance.Click += new System.EventHandler(this.btnManageAttendance_Click);
             // 
+            // btnEvents
+            // 
+            this.btnEvents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEvents.Location = new System.Drawing.Point(12, 184);
+            this.btnEvents.Name = "btnEvents";
+            this.btnEvents.Size = new System.Drawing.Size(513, 43);
+            this.btnEvents.TabIndex = 15;
+            this.btnEvents.Text = "Manage Events";
+            this.btnEvents.UseVisualStyleBackColor = true;
+            this.btnEvents.Click += new System.EventHandler(this.btnEvents_Click);
+            // 
             // AdminWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 315);
+            this.ClientSize = new System.Drawing.Size(537, 350);
+            this.Controls.Add(this.btnEvents);
             this.Controls.Add(this.btnManageAttendance);
             this.Controls.Add(this.lblNama);
             this.Controls.Add(this.Email);
@@ -131,5 +145,6 @@
         private System.Windows.Forms.Label lblNama;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Button btnManageAttendance;
+        private System.Windows.Forms.Button btnEvents;
     }
 }

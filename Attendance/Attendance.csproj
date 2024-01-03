@@ -114,6 +114,12 @@
       <DependentUpon>AttendanceManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Koneksi.cs" />
+    <Compile Include="EventManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventManager.Designer.cs">
+      <DependentUpon>EventManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AttendanceManager.resx">
       <DependentUpon>AttendanceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventManager.resx">
+      <DependentUpon>EventManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
