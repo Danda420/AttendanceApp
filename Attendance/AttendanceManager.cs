@@ -200,6 +200,17 @@ namespace Attendance
         private void AttendanceManager_Load(object sender, EventArgs e)
         {
             updateTable();
+
+            conn.Open();
+            string query = "SELECT * FROM events";
+            cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                cbAddAtt.Items.Add(reader.GetString(1));
+            }
+            conn.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
